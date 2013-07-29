@@ -25,9 +25,23 @@
         CGSize screenSize = [[CCDirector sharedDirector]winSize];
         
         CCSprite *sprite = [CCSprite spriteWithFile:@"Icon-72.png"];
+
         CGFloat imageHeight = [sprite texture].contentSize.height;
         sprite.position = CGPointMake(screenSize.width/ 2, imageHeight/ 2);
         [self addChild:sprite];
+        
+        CCSprite *sprite1 = [CCSprite spriteWithFile:@"fps_images.png"];
+        
+        sprite1.position = CGPointMake(screenSize.width/ 2, screenSize.height/ 2);
+        sprite1.anchorPoint = CGPointMake(0.5f, 0.5f);
+        [self addChild:sprite1];
+        
+        CCLabelTTF* label = [CCLabelTTF labelWithString:@"hello" fontName:nil fontSize:25];
+        label.position = CGPointMake(screenSize.width/2,screenSize.height/2);
+        label.color = ccc3(255 , 255 , 255);
+        label.anchorPoint = CGPointMake(0.5f, 0.5f);
+        [self addChild:label z:100];
+        
     }
     return self;
 }
