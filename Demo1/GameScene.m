@@ -36,7 +36,8 @@
         sprite1.anchorPoint = CGPointMake(0.5f, 0.5f);
         [self addChild:sprite1];
         
-        CCLabelTTF* label = [CCLabelTTF labelWithString:@"hello" fontName:@"AppleGothic1111" fontSize:33];
+        CCLabelTTF* label = [CCLabelTTF labelWithString:@"hello" fontName:@"Arial" fontSize:33];
+
         label.position = CGPointMake(screenSize.width/2,screenSize.height/2);
         label.color = ccc3(255 , 255 , 255);
         label.anchorPoint = CGPointMake(0.5f, 0.5f);
